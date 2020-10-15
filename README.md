@@ -66,6 +66,19 @@ Things you may want to cover:
 
 | Column         | Type       | Options                        |
 | -------------- | ---------- | ------------------------------ |
+| user           | references | null: false, foreign_key: true |
+| item           | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :user
+- belongs_to :item
+- has_one :customer
+
+## customers テーブル
+
+| Column         | Type       | Options                        |
+| -------------- | ---------- | ------------------------------ |
 | postal-code    | string     | null: false                    |
 | prefecture     | integer    | null: false                    |
 | city           | string     | null: false                    |
@@ -74,8 +87,8 @@ Things you may want to cover:
 | phone-number   | string     | null: false                    |
 | user           | references | null: false, foreign_key: true |
 | item           | references | null: false, foreign_key: true |
+| order          | references | null: false, foreign_key: true |
 
 ### Association
 
-- belongs_to :user
-- belongs_to :item
+- belongs_to :order
