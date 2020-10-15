@@ -32,11 +32,11 @@ Things you may want to cover:
 | nickname          | string | null: false |
 | email             | string | null: false |
 | password          | string | null: false |
-| first-name        | string | null: false |
-| last-name         | string | null: false |
-| first-name-kana   | string | null: false |
-| last-name-kana    | string | null: false |
-| birth-date        | string | null: false |
+| first_name        | string | null: false |
+| last_name         | string | null: false |
+| first_name_kana   | string | null: false |
+| last_name_kana    | string | null: false |
+| birth_date        | date   | null: false |
 
 ### Association
 
@@ -47,14 +47,14 @@ Things you may want to cover:
 
 | Column                     | Type       | Options                        |
 | -------------------------- | ---------- | ------------------------------ |
-| item-name                  | text       | null: false                    |
-| item-info                  | text       | null: false                    |
-| item-category              | integer    | null: false                    |
-| item-sales-status          | integer    | null: false                    |
-| item-shipping-fee-status   | integer    | null: false                    |
-| item-prefecture            | integer    | null: false                    |
-| item-scheduled-delivery    | integer    | null: false                    |
-| item-price                 | integer    | null: false                    |
+| item_name                  | text       | null: false                    |
+| item_info                  | text       | null: false                    |
+| item_category              | integer    | null: false                    |
+| item_sales_status          | integer    | null: false                    |
+| item_shipping_fee_status   | integer    | null: false                    |
+| item_prefecture            | integer    | null: false                    |
+| item_scheduled_delivery    | integer    | null: false                    |
+| item_price                 | integer    | null: false                    |
 | user                       | references | null: false, foreign_key: true |
 
 ### Association
@@ -79,12 +79,12 @@ Things you may want to cover:
 
 | Column         | Type       | Options                        |
 | -------------- | ---------- | ------------------------------ |
-| postal-code    | string     | null: false                    |
+| postal_code    | string     | null: false                    |
 | prefecture     | integer    | null: false                    |
 | city           | string     | null: false                    |
 | addresses      | string     | null: false                    |
 | building       | string     |                                |
-| phone-number   | string     | null: false                    |
+| phone_number   | string     | null: false                    |
 | user           | references | null: false, foreign_key: true |
 | item           | references | null: false, foreign_key: true |
 | order          | references | null: false, foreign_key: true |
