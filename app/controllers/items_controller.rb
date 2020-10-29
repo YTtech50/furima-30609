@@ -26,7 +26,7 @@ class ItemsController < ApplicationController
     if @item.user == current_user && !Order.exists?(item_id: @item.id)
       render :edit
     elsif @item.user == current_user && Order.exists?(item_id: @item.id)
-      redirect_to root_path   
+      redirect_to root_path
     else
       redirect_to root_path
     end
